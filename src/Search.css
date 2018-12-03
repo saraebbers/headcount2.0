@@ -22,3 +22,7 @@
   background-color: green;
   color: white;
 }
+
+.inputButton:focus {
+  outline: none;
+}

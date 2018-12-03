@@ -12,7 +12,6 @@ class Search extends Component {
 
   handleImputChange = (e) => {
     const { name, value } = e.target;
-    // value = value.toUppercase();
     this.setState( {[name]: value.toUpperCase()})
     this.props.searchForDistrict(value.toUpperCase())
   }
@@ -20,7 +19,6 @@ class Search extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const searchString = this.state.searchString;
-    // console.log(searchForDistrict);
     this.props.searchForDistrict(searchString)
     this.setState({searchString : ''})
   }

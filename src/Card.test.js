@@ -6,7 +6,7 @@ describe('Card', () => {
   it('matches the snapshot', () => {
 
     let wrapper = shallow(<Card 
-            key={Date.now()} 
+            key={'5'} 
             location={'string'}
             stats={{1909: 0.107, 3999: 5.999}} />);
     expect(wrapper).toMatchSnapshot()

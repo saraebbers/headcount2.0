@@ -3,7 +3,9 @@
 exports[`Search matches the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Search />,
+  Symbol(enzyme.__unrendered__): <Search
+    searchForDistrict={[Function]}
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -25,12 +27,15 @@ ShallowWrapper {
           onSubmit={[Function]}
 >
           <input
+                    className="inputField"
                     name="searchString"
                     onChange={[Function]}
                     placeholder="Enter District You Want To Search"
                     value=""
           />
-          <button>
+          <button
+                    className="inputButton"
+          >
                     Submit
           </button>
 </form>,
@@ -57,12 +62,15 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <input
+              className="inputField"
               name="searchString"
               onChange={[Function]}
               placeholder="Enter District You Want To Search"
               value=""
 />,
-            <button>
+            <button
+              className="inputButton"
+>
               Submit
 </button>,
           ],
@@ -75,6 +83,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
+              "className": "inputField",
               "name": "searchString",
               "onChange": [Function],
               "placeholder": "Enter District You Want To Search",
@@ -90,6 +99,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "Submit",
+              "className": "inputButton",
             },
             "ref": null,
             "rendered": "Submit",
@@ -115,12 +125,15 @@ ShallowWrapper {
             onSubmit={[Function]}
 >
             <input
+                        className="inputField"
                         name="searchString"
                         onChange={[Function]}
                         placeholder="Enter District You Want To Search"
                         value=""
             />
-            <button>
+            <button
+                        className="inputButton"
+            >
                         Submit
             </button>
 </form>,
@@ -147,12 +160,15 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <input
+                className="inputField"
                 name="searchString"
                 onChange={[Function]}
                 placeholder="Enter District You Want To Search"
                 value=""
 />,
-              <button>
+              <button
+                className="inputButton"
+>
                 Submit
 </button>,
             ],
@@ -165,6 +181,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
+                "className": "inputField",
                 "name": "searchString",
                 "onChange": [Function],
                 "placeholder": "Enter District You Want To Search",
@@ -180,6 +197,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "Submit",
+                "className": "inputButton",
               },
               "ref": null,
               "rendered": "Submit",

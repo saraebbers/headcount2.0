@@ -25,6 +25,38 @@ export default class DistrictRepository {
     }
   }
 
+  findAverage = (district) => {
+    if (!district) {
+      console.log('error, no district entered');
+    } else {
+      let districtName = {};
+      let ucDistrict = district.toUpperCase();
+      
+      if (Object.keys(this.stats).includes(ucDistrict)) {
+        districtName = {location: ucDistrict, stats: this.stats[ucDistrict]};
+        let total = 0;
+        let i;
+        let lengthObj = Object.values(districtName.stats).length;
+        for (i=0; i < lengthObj; i++) {
+          total = total + Object.values(districtName.stats)[i];
+        }
+        const average = (total/lengthObj);
+        const roundedAverage = Math.round(1000 * average) / 1000;
+        return roundedAverage
+        }
+    }
+  }
+
+  compareDistrictAverages = (comparison1, comparison2) => {
+    const ucComparison1 = comparison1.toUpperCase();
+    const ucComparison2 = comparison2.toUpperCase();
+    const ave1 = this.findAverage(ucComparison1);
+    const ave2 = this.findAverage(ucComparison2);
+    const comparison = ave1/ave2;
+    const roundedComparison = Math.round(1000 * comparison) / 1000;
+    return {[ucComparison1]: ave1, [ucComparison2]: ave2, compared: roundedComparison}
+  }
+
   findAllMatches = (searchName) => {
       if (searchName) {
         const ucSearchName = searchName.toUpperCase()

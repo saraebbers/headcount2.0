@@ -4,7 +4,7 @@ import { shallow } from 'enzyme';
 
 describe('Search', () => {
   it('matches the snapshot', () => {
-    const wrapper = shallow(<Search />);
+    const wrapper = shallow(<Search searchForDistrict={()=> {}} />);
     expect(wrapper).toMatchSnapshot()
   });
 

@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import './Card.css'
 
 const Card = ( {location, stats} ) => {
-    const displayStats = Object.keys(stats).map(stat => {
-      return ( <li className={`listedStats ${stats[stat] < 0.5 ? 'below' : 'above'}`}> {`${stat}: ${stats[stat] }`}</li>
+    const displayStats = Object.keys(stats).map((stat, index) => {
+      return ( <li key={`${location}-${index}`} className={`listedStats ${stats[stat] < 0.5 ? 'below' : 'above'}`}> {`${stat}: ${stats[stat] }`}</li>
         )
     })
     
